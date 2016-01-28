@@ -29,6 +29,6 @@ public class CalculatorDemo4 {
         c1.sum();       
         c1.avg();
         c1.substract();
-        
+        System.out.println("update test3");
     }
 }
