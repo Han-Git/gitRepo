@@ -31,5 +31,6 @@ public class CalculatorDemo4 {
         c1.avg();
         c1.substract();
         System.out.println("CalculatorDemo4 END!");
+        System.out.println("CalculatorDemo4 END!!");
     }
 }
