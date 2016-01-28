@@ -24,6 +24,7 @@ class SubstractionableCalculator extends Calculator {
 
 public class CalculatorDemo4 {
 	public static void main(String[] args) {
+		System.out.println("CalculatorDemo4 Start!");
 		SubstractionableCalculator c1 = new SubstractionableCalculator();
         c1.setOprands(10, 20);
         c1.sum();       
