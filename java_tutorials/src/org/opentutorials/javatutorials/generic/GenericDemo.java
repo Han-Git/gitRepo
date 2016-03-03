@@ -1,10 +1,10 @@
 package org.opentutorials.javatutorials.generic;
 
-abstract class Info{
-	public abstract int getLevel();
+interface Info{
+	int getLevel();
 }
 
-class EmployeeInfo extends Info{
+class EmployeeInfo implements Info{
 	public int rank;
 	EmployeeInfo(int rank){
 		this.rank = rank;
@@ -27,7 +27,7 @@ public class GenericDemo {
 		Person p1 = new Person(new EmployeeInfo(12));
 		System.out.println(p1.info.getLevel());
 		
-		// error because it's not extended by Info
+		// error because it(String) doesn't extend Info
 		//Person<String> p2 = new Person<String>("∫Œ¿Â");
 	}
 }
