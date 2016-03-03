@@ -14,13 +14,18 @@ class Person<T,S>{
 		this.info = info;
 		this.id = id;
 	}
+	
+	public <U> void printInfo(U info){
+        System.out.println(info);
+    }
 }
 
 public class GenericDemo {
 	public static void main(String[] args) {
+		EmployeeInfo e = new EmployeeInfo(1);
 		Integer id = new Integer(1);
 		// can't put 'int' to Generic... so need to change to Integer
-		Person<EmployeeInfo, Integer> p1 = new Person<EmployeeInfo, Integer>(new EmployeeInfo(1),id);
-		System.out.println(p1.id.intValue());
+		Person p1 = new Person(e,id);
+		p1.printInfo(e);
 	}
 }
