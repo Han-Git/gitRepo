@@ -24,8 +24,8 @@ public class GenericDemo {
 	public static void main(String[] args) {
 		EmployeeInfo e = new EmployeeInfo(1);
 		Integer id = new Integer(1);
-		// can't put 'int' to Generic... so need to change to Integer
-		Person p1 = new Person(e,id);
-		p1.printInfo(e);
+		// you can omit <Generic> 
+		Person p1 = new Person(e,id);	//Person<EmployeeInfo,Integer> p1 = new Person<EmployeeInfo,Integer>(e,id);
+		p1.printInfo(e);	// p1.<EmployeeInfo>printInfo(e);
 	}
 }
