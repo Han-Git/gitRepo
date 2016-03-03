@@ -14,17 +14,17 @@ class EmployeeInfo{
 	}
 }
 
-class Person{
-	public Object info;
-	Person(Object info){
+class Person<T>{
+	public T info;
+	Person(T info){
 		this.info = info;
 	}
 }
 
 public class GenericDemo {
 	public static void main(String[] args) {
-		Person p1 = new Person("∫Œ¿Â");
-		EmployeeInfo ei = (EmployeeInfo)p1.info;
-		System.out.println(ei.rank);
+		Person<EmployeeInfo> p1 = new Person<EmployeeInfo>(new EmployeeInfo(1));
+		EmployeeInfo ei1 = p1.info;
+		System.out.println(ei1.rank);
 	}
 }
